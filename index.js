@@ -16,7 +16,7 @@ function Popup(properties, attribute, layer, radius){
 //function to instantiate the Leaflet map with custom basemap
 function createMap(){
     //create the map
-    var map = L.map('map', {
+    let map = L.map('map', {
         center: [ 53, -97.2923],
         zoom: 4
     });
@@ -55,12 +55,12 @@ function createPropSymbols(data, map, attributes){
  //function to convert markers to circle markers
 function pointToLayer(feature, latlng, attributes){
 
-    var attribute = attributes[0];
+    let attribute = attributes[0];
     //check
     console.log(attribute);
 
     //create marker options
-    var options = {
+    let options = {
         fillColor: "#FF0000",
         color: "#000",
         weight: 1,
@@ -69,13 +69,13 @@ function pointToLayer(feature, latlng, attributes){
     };
 
     //For each feature, determine its value for the selected attribute
-    var attValue = Number(feature.properties[attribute]);
+    let attValue = Number(feature.properties[attribute]);
 
     //Give each feature's circle marker a radius based on its attribute value
     options.radius = calcPropRadius(attValue);
 
     //create circle marker layer
-    var layer = L.circleMarker(latlng, options);
+    let layer = L.circleMarker(latlng, options);
     let popup = new Popup(feature.properties, attribute, layer, options.radius)
     popup.bindToLayer();
     return layer;
@@ -85,10 +85,10 @@ function updatePropSymbols(map, attribute){
     map.eachLayer(function(layer){
         if (layer.feature && layer.feature.properties[attribute]){
             //access feature properties
-            var props = layer.feature.properties;
+            let props = layer.feature.properties;
     
             //update each feature's radius based on new attribute values
-            var radius = calcPropRadius(props[attribute]);
+            let radius = calcPropRadius(props[attribute]);
             layer.setRadius(radius);
             let popup = new Popup(props, attribute, layer, radius)
             popup.bindToLayer();
@@ -100,11 +100,11 @@ function updateLegend(map, attribute){
     let year = attribute.split("_")[1];
     document.getElementById('legend').innerHTML = `The Average Household income in ${year}`;
       //get the max, mean, and min values as an object
-      var circleValues = getCircleValues(map, attribute);
+      let circleValues = getCircleValues(map, attribute);
 
-      for (var key in circleValues){
+      for (let key in circleValues){
         //get the radius
-        var radius = calcPropRadius(circleValues[key]);
+        let radius = calcPropRadius(circleValues[key]);
 
         $('#'+key).attr({
             cy: 65 - radius,
@@ -118,13 +118,13 @@ function updateLegend(map, attribute){
 
 function getCircleValues(map, attribute){
     //start with min at highest possible and max at lowest possible number
-    var min = Infinity,
+    let min = Infinity,
         max = -Infinity;
 
     map.eachLayer(function(layer){
         //get the attribute value
         if (layer.feature){
-            var attributeValue = Number(layer.feature.properties[attribute]);
+            let attributeValue = Number(layer.feature.properties[attribute]);
 
             //test for min
             if (attributeValue < min){
@@ -139,7 +139,7 @@ function getCircleValues(map, attribute){
     });
 
     //set mean
-    var mean = (max + min) / 2;
+    let mean = (max + min) / 2;
 
     //return values as an object
     return {
@@ -152,13 +152,13 @@ function getCircleValues(map, attribute){
 
 function processData(data){
     //empty array to hold attributes
-    var attributes = [];
+    let attributes = [];
 
     //properties of the first feature in the dataset
-    var properties = data.features[0].properties;
+    let properties = data.features[0].properties;
 
     //push each attribute name into attributes array
-    for (var attribute in properties){
+    for (let attribute in properties){
         //only take attributes with income values
         if (attribute.indexOf("Income") > -1){
             attributes.push(attribute);
@@ -173,11 +173,11 @@ function processData(data){
 
 function calcPropRadius(attValue) {
     //scale factor to adjust symbol size evenly
-    var scaleFactor = 0.04;
+    let scaleFactor = 0.04;
     //area based on attribute value and scale factor, minus 60000 to make difference more obvious
-    var area = (attValue - 60000) * scaleFactor;
+    let area = (attValue - 60000) * scaleFactor;
     //radius calculated based on area
-    var radius = Math.sqrt(area/Math.PI);
+    let radius = Math.sqrt(area/Math.PI);
 
     return radius;
 };
@@ -189,7 +189,7 @@ function getData(map){
         dataType: "json",
         success: function(response){
             //call function to create proportional symbols
-            var attributes = processData(response)
+            let attributes = processData(response)
 
             // create symbol, sequence control and legend
             createPropSymbols(response, map, attributes);
@@ -201,21 +201,19 @@ function getData(map){
 };
 
 function createSequenceControls(map, attributes){   
-    var SequenceControl = L.Control.extend({
+    let SequenceControl = L.Control.extend({
         options: {
             position: 'bottomleft'
         },
 
         onAdd: function (map) {
             // create the control container div with a particular class name
-            var container = L.DomUtil.create('div', 'sequence-control-container');
+            let container = L.DomUtil.create('div', 'sequence-control-container');
 
             //add skip buttons
-            // $(container).append('<button class="skip" id="reverse" title="Reverse">Reverse</button>');
             $(container).append('<img class="skip" id="reverse" src="left-arrow.png">');
             //create range input element (slider)
             $(container).append('<input class="range-slider" type="range">');
-            // $(container).append('<button class="skip" id="forward" title="Forward">Forward</button>');
             $(container).append('<img class="skip" id="forward" src="right-arrow.png">');
 
             //kill dragging event
@@ -235,6 +233,7 @@ function createSequenceControls(map, attributes){
     })
     map.addControl(new SequenceControl());
 
+    // set the specs of the range slider 
     $('.range-slider').attr({
         max: 10,
         min: 0,
@@ -245,7 +244,7 @@ function createSequenceControls(map, attributes){
     // the logic for the slider 
     $('.skip').click(function(){
         //get the old index value
-        var index = $('.range-slider').val();
+        let index = $('.range-slider').val();
 
         if ($(this).attr('id') == 'forward'){
             index++;
@@ -267,26 +266,26 @@ function createSequenceControls(map, attributes){
 };
 
 function createLegend(map, attributes){
-    var LegendControl = L.Control.extend({
+    let LegendControl = L.Control.extend({
         options: {
             position: 'bottomright'
         },
         onAdd: function () {
             // create the control container with a particular class name
-            var container = L.DomUtil.create('div', 'legend-control-container');
+            let container = L.DomUtil.create('div', 'legend-control-container');
             // legend creation
             $(container).append(`<p style="line-height=100%;" id="legend" >The Average Household income in ${attributes[$('.range-slider').val()].split("_")[1]}</p>`);
             let svg = '<svg id="attribute-legend" width="160px" height="80px">';
 
         //array of circle names to base loop on
-        var circles = {
+        let circles = {
             max: 20,
             mean: 40,
             min: 60
         };
 
         //Step 2: loop to add each circle and text to svg string
-        for (var circle in circles){
+        for (let circle in circles){
             //circle string
             svg += '<circle class="legend-circle" id="' + circle + 
             '" fill="#FF0000" fill-opacity="0.8" stroke="#000000" cx="33"/>';
