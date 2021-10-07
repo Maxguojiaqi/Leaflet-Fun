@@ -1,0 +1,366 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "PlaceName": "Toronto",
+                "Income_2009": 74110,
+                "Income_2010": 75580,
+                "Income_2011": 77350,
+                "Income_2012": 78990,
+                "Income_2013": 80680,
+                "Income_2014": 83010,
+                "Income_2015": 86260,
+                "Income_2016": 88170,
+                "Income_2017": 91700,
+                "Income_2018": 95140,
+                "Income_2019": 97640
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -79.3832,
+                     43.6532
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "PlaceName": "Ottawa",
+                "Income_2009": 102320,
+                "Income_2010": 103870,
+                "Income_2011": 106230,
+                "Income_2012": 107510,
+                "Income_2013": 110540,
+                "Income_2014": 111410,
+                "Income_2015": 113610,
+                "Income_2016": 114510,
+                "Income_2017": 119440,
+                "Income_2018": 122840,
+                "Income_2019": 125950
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.6972,
+                    45.4215
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "PlaceName": "Montreal",
+                "Income_2009": 72520,
+                "Income_2010": 73690,
+                "Income_2011": 76020,
+                "Income_2012": 78260,
+                "Income_2013": 80140,
+                "Income_2014": 82010,
+                "Income_2015": 84030,
+                "Income_2016": 86160,
+                "Income_2017": 89370,
+                "Income_2018": 92990,
+                "Income_2019": 96820
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.5673,
+                    45.5017
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "PlaceName": "Quebec City",
+                "Income_2009": 80400,
+                "Income_2010": 81620,
+                "Income_2011": 84410,
+                "Income_2012": 87260,
+                "Income_2013": 89640,
+                "Income_2014": 91550,
+                "Income_2015": 93070,
+                "Income_2016": 95130,
+                "Income_2017": 98540,
+                "Income_2018": 102150,
+                "Income_2019": 105900
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.2080,
+                    46.8139
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "PlaceName": "Fredericton",
+                "Income_2009": 79250,
+                "Income_2010": 80440,
+                "Income_2011": 82340,
+                "Income_2012": 84120,
+                "Income_2013": 86920,
+                "Income_2014": 88450,
+                "Income_2015": 89970,
+                "Income_2016": 90970,
+                "Income_2017": 94170,
+                "Income_2018": 96280,
+                "Income_2019": 98520
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.658,
+                    45.952
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "PlaceName": "Halifax",
+                "Income_2009": 83560,
+                "Income_2010": 85170,
+                "Income_2011": 87430,
+                "Income_2012": 89530,
+                "Income_2013": 91620,
+                "Income_2014": 93800,
+                "Income_2015": 95250,
+                "Income_2016": 95760,
+                "Income_2017": 98870,
+                "Income_2018": 101550,
+                "Income_2019": 102810
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -63.57,
+                    44.648
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "PlaceName": "St. John's",
+                "Income_2009": 86120,
+                "Income_2010": 88890,
+                "Income_2011": 94040,
+                "Income_2012": 98630,
+                "Income_2013": 102810,
+                "Income_2014": 106240,
+                "Income_2015": 108420,
+                "Income_2016": 108340,
+                "Income_2017": 109520,
+                "Income_2018": 113050,
+                "Income_2019": 114240
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -52.7408,
+                    47.5585
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "PlaceName": "Winnipeg",
+                "Income_2009": 79090,
+                "Income_2010": 79680,
+                "Income_2011": 81740,
+                "Income_2012": 83740,
+                "Income_2013": 85670,
+                "Income_2014": 87600,
+                "Income_2015": 89740,
+                "Income_2016": 91010,
+                "Income_2017": 93790,
+                "Income_2018": 95830,
+                "Income_2019": 97580
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -97.2923,
+                    49.8539
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "PlaceName": "Regina",
+                "Income_2009": 94180,
+                "Income_2010": 95260,
+                "Income_2011": 99630,
+                "Income_2012": 101950,
+                "Income_2013": 104810,
+                "Income_2014": 106990,
+                "Income_2015": 109090,
+                "Income_2016": 107840,
+                "Income_2017": 110390,
+                "Income_2018": 111800,
+                "Income_2019": 112920
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -104.7057,
+                    50.4582
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "PlaceName": "Saskatoon",
+                "Income_2009": 87570,
+                "Income_2010": 89350,
+                "Income_2011": 93900,
+                "Income_2012": 96710,
+                "Income_2013": 99790,
+                "Income_2014": 102660,
+                "Income_2015": 104260,
+                "Income_2016": 102730,
+                "Income_2017": 105000,
+                "Income_2018": 106310,
+                "Income_2019": 107820
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -106.7344,
+                    52.1505
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "PlaceName": "Calgary",
+                "Income_2009": 95630,
+                "Income_2010": 97070,
+                "Income_2011": 101210,
+                "Income_2012": 106270,
+                "Income_2013": 109260,
+                "Income_2014": 112420,
+                "Income_2015": 112380,
+                "Income_2016": 107620,
+                "Income_2017": 110200,
+                "Income_2018": 112540,
+                "Income_2019": 115010
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -114.4179,
+                    50.9111
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "PlaceName": "Edmonton",
+                "Income_2009": 94770,
+                "Income_2010": 96750,
+                "Income_2011": 100620,
+                "Income_2012": 105280,
+                "Income_2013": 107720,
+                "Income_2014": 110490,
+                "Income_2015": 110990,
+                "Income_2016": 107740,
+                "Income_2017": 110610,
+                "Income_2018": 112610,
+                "Income_2019": 114900
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -113.628,
+                    53.5502
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "PlaceName": "Vancouver",
+                "Income_2009": 73070,
+                "Income_2010": 72610,
+                "Income_2011": 74510,
+                "Income_2012": 76690,
+                "Income_2013": 78980,
+                "Income_2014": 81700,
+                "Income_2015": 85560,
+                "Income_2016": 88000,
+                "Income_2017": 92210,
+                "Income_2018": 94980,
+                "Income_2019": 97580
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -123.324,
+                    49.24521
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "PlaceName": "Victoria",
+                "Income_2009": 84130,
+                "Income_2010": 84410,
+                "Income_2011": 85840,
+                "Income_2012": 87960,
+                "Income_2013": 90990,
+                "Income_2014": 92840,
+                "Income_2015": 96020,
+                "Income_2016": 97580,
+                "Income_2017": 101800,
+                "Income_2018": 104830,
+                "Income_2019": 107910
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -123.365,
+                    48.428
+                    
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "PlaceName": "Whitehorse",
+                "Income_2009": 103450,
+                "Income_2010": 105320,
+                "Income_2011": 108340,
+                "Income_2012": 113010,
+                "Income_2013": 115070,
+                "Income_2014": 117210,
+                "Income_2015": 120030,
+                "Income_2016": 123300,
+                "Income_2017": 126490,
+                "Income_2018": 129800,
+                "Income_2019": 135100
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -135.2246,
+                    60.6998
+                ]
+            }
+        }
+    ]
+}

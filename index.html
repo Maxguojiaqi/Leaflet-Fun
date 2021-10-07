@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Geo575 Lab1</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="node_modules/leaflet-search/src/leaflet-search.js"></script>
+	<link rel="stylesheet" href="node_modules/leaflet-search/src/leaflet-search.css" />
+	<link rel="stylesheet" href="map.css" />
+</head>
+<body>
+<div id="map"></div>
+<div id="description">
+	<center>
+		<h1>Canadian Family income by Cities</h1>
+		<p>This simple web map displays the 15 major Canadian cities's medium family income from year 2009 to 2019. </p>
+		<h3>Drag to pan</h3>
+		<h3>Scroll or click '+' and '-' to zoom</h3>
+		<h3>Click on the cluster to retrive information</h3>
+		<h3>Use slider to see the progression</h3>
+		<h3>Click on the search button on the top right to search for address</h3>
+		<p><i>Data Reference: statistics canada, city of ottawa public libraries</i></p>
+	</center>
+</div>
+</body>
+<script src="index.js"></script>
+</html>
